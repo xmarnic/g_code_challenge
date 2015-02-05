@@ -17,6 +17,10 @@ def iterative_answer(s):
     return ''.join(output + operators)
 
 def answer(s):
+    '''Assumes s, a string [*+0-9] representing mathematical
+        formula with infix notation.
+       Returns string, s converted to postfix notation.
+    '''
     def RPN(s, out, ops, precedence):
         if not s:
             return ''.join(out + ops)
